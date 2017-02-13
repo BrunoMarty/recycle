@@ -34,6 +34,16 @@ return array(
                     ),
                 ),
             ),
+            'log' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/log',
+                    'defaults' => array(
+                        'controller' => 'Main/Controller/User',
+                        'action'     => 'log',
+                    ),
+                ),
+            ),
             // The following is a route to simplify getting started creating
             // new controllers and actions without needing to create a new
             // module. Simply drop new controllers in, and you can access them
@@ -63,7 +73,8 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Main\Controller\Index' => 'Main\Controller\IndexController',
-            'Main\Controller\Cat' => 'Main\Controller\CatController'
+            'Main\Controller\Cat' => 'Main\Controller\CatController',
+             'Main\Controller\User' => 'Main\Controller\UserController'
         ),
     ),
     'view_manager' => array(

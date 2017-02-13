@@ -17,7 +17,6 @@
                 ->prependStylesheet($this->basePath() . '/css/style.css')
                 ->prependStylesheet($this->basePath() . '/css/bootstrap-theme.min.css')
                 ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css')
-    
         ?>
 
         <!-- Scripts -->
@@ -32,53 +31,78 @@
 
     </head>
     <body>
-
+        <div id="user">
+            <?php
+            if(!$_SESSION){
+              
+                
+            }
+                
+            ?>
+        </div>
         <header>
-            <img src="/../img/ban.jpg" alt="Zend Framework 2"/>
+            <img src = "/../img/ban1.jpg" alt = "Zend Framework 2"/>
 
         </header>
-        <nav class="navbar navbar-toggleable-md navbar-light bg-faded" role="navigation">
+        <nav class = "navbar navbar-toggleable-md navbar-light bg-faded" role = "navigation">
 
-            </div>  
+     
 
-           
-               <a href="<?php echo $this->url('home') ?>">Accueil</a>
-                <div class="dropdown">
-                <a class="dropbtn">Enfants</a>
-                <div class="dropdown-content">
-                    <a href="/cat/11">Pantalons</a>
-                    <a href="/cat/12">Hauts</a>
-                    <a href="/cat/13">Robes</a>
-                    <a href="/cat/14">Vestes</a>
-                    <a href="/cat/15">Chaussures</a>
-                    <a href="/cat/16">Accessoires</a>
-                </div>
+
+        <a href = "<?php echo $this->url('home') ?>">Accueil</a>
+        <div class = "dropdown">
+            <a class = "dropbtn">Enfants</a>
+            <div class = "dropdown-content">
+                <a href = "/cat/11">Pantalons</a>
+                <a href = "/cat/12">Hauts</a>
+                <a href = "/cat/13">Robes</a>
+                <a href = "/cat/14">Vestes</a>
+                <a href = "/cat/15">Chaussures</a>
+                <a href = "/cat/16">Accessoires</a>
             </div>
-                <div class="dropdown">
-                <a class="dropbtn">Femmes</a>
-                <div class="dropdown-content">
-                    <a href="/cat/21">Pantalons</a>
-                    <a href="/cat/22">Hauts</a>
-                    <a href="/cat/23">Robes</a>
-                    <a href="/cat/24">Vestes</a>
-                    <a href="/cat/25">Chaussures</a>
-                    <a href="/cat/26">Accessoires</a>
-                </div>
-            </div>  
-                <a href="">Bric à Brac</a>
-               <a href="">Contact</a>
+        </div>
+        <div class = "dropdown">
+            <a class = "dropbtn">Femmes</a>
+            <div class = "dropdown-content">
+                <a href = "/cat/21">Pantalons</a>
+                <a href = "/cat/22">Hauts</a>
+                <a href = "/cat/23">Robes</a>
+                <a href = "/cat/24">Vestes</a>
+                <a href = "/cat/25">Chaussures</a>
+                <a href = "/cat/26">Accessoires</a>
+            </div>
+        </div>
+        <a href = "/cat/3">Bric à Brac</a>
+        <a href = "">Contact</a>
 
-          
-            <!--/.nav-collapse -->
 
-        </nav>
-        <div class="container">
-        <?php echo $this->content; ?>
-            <hr>
-            <footer>
-                <p>&copy; 2017 - <?php echo date('Y') ?> by Bruno Marty. <?php echo $this->translate('All rights reserved.') ?></p>
-            </footer>
-        </div> <!-- /container -->
-<?php echo $this->inlineScript() ?>
-    </body>
+        <!--/.nav-collapse -->
+
+    </nav>
+    <div class = "container">
+        <?php echo $this->content;
+        ?>
+        <hr>
+        <footer>
+            <p>&copy; 2017 - <?php echo date('Y') ?> by Bruno Marty. <?php echo $this->translate('All rights reserved.') ?></p>
+        </footer>
+    </div> <!-- /container -->
+    <?php echo $this->inlineScript() ?>
+            <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: "/log",
+                    dataType: 'json',
+                    complete: function (event) {
+
+                        event = event.responseText;
+                        console.log(event.length);
+                        $('#user').append(event);
+
+
+                    }
+                });
+            });
+        </script>
+</body>
 </html>

@@ -3,13 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/html/recycle/module/Main/src/Main/Controller/EnfantController.php</file>
             <file>file:/var/www/html/recycle/module/Main/config/module.config.php</file>
-            <file>file:/var/www/html/recycle/module/Main/src/Main/Controller/IndexController.php</file>
+            <file>file:/var/www/html/recycle/module/Main/src/Main/Entity/Client.php</file>
+            <file>file:/var/www/html/recycle/module/Main/src/Main/Entity/Categorie.php</file>
+            <file>file:/var/www/html/recycle/module/Main/src/Main/Entity/Commande.php</file>
             <file>file:/var/www/html/recycle/public/css/style.css</file>
-            <file>file:/var/www/html/recycle/module/Main/view/main/enfant/affichage.phtml</file>
-            <file>file:/var/www/html/recycle/public/index.php</file>
+            <file>file:/var/www/html/recycle/module/Main/view/main/cat/affichage.phtml</file>
+            <file>file:/var/www/html/recycle/module/Main/view/main/index/index.phtml</file>
+            <file>file:/var/www/html/recycle/module/Main/src/Main/Entity/Article.php</file>
             <file>file:/var/www/html/recycle/module/Main/view/layout/layout.phtml</file>
+            <file>file:/var/www/html/recycle/module/Main/src/Main/Controller/CatController.php</file>
         </group>
     </open-files>
 </project-private>
