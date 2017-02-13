@@ -15,11 +15,11 @@ class Taille
     /**
      * @var integer
      *
-     * @ORM\Column(name="Id_Taille", type="integer", nullable=false)
+     * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idTaille;
+    private $id;
 
     /**
      * @var string
@@ -34,6 +34,8 @@ class Taille
      * @ORM\Column(name="Stock", type="integer", nullable=false)
      */
     private $stock;
+
+
 
 
 }

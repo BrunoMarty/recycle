@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Categorie
  *
- * @ORM\Table(name="Categorie")
+ * @ORM\Table(name="Categorie", indexes={@ORM\Index(name="IDX_CB8C5497D2ED65FD", columns={"Parent_Cat"})})
  * @ORM\Entity
  */
 class Categorie
@@ -29,11 +29,38 @@ class Categorie
     private $nomCat;
 
     /**
-     * @var integer
+     * @var \Main\Entity\Categorie
      *
-     * @ORM\Column(name="Parent_Cat", type="integer", nullable=true)
+     * @ORM\ManyToOne(targetEntity="Main\Entity\Categorie")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="Parent_Cat", referencedColumnName="Id_Cat")
+     * })
      */
     private $parentCat;
+
+    function getIdCat() {
+        return $this->idCat;
+    }
+
+    function getNomCat() {
+        return $this->nomCat;
+    }
+
+    function getParentCat(): \Main\Entity\Categorie {
+        return $this->parentCat;
+    }
+
+    function setIdCat($idCat) {
+        $this->idCat = $idCat;
+    }
+
+    function setNomCat($nomCat) {
+        $this->nomCat = $nomCat;
+    }
+
+    function setParentCat(\Main\Entity\Categorie $parentCat) {
+        $this->parentCat = $parentCat;
+    }
 
 
 }

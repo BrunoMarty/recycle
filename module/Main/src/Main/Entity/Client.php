@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Client
  *
- * @ORM\Table(name="Client")
+ * @ORM\Table(name="Client", indexes={@ORM\Index(name="IDX_C0E80163CE3A9031", columns={"Ville_Client"})})
  * @ORM\Entity
  */
 class Client
@@ -50,11 +50,62 @@ class Client
     private $adresseClient;
 
     /**
-     * @var integer
+     * @var \Main\Entity\Ville
      *
-     * @ORM\Column(name="Ville_Client", type="integer", nullable=false)
+     * @ORM\ManyToOne(targetEntity="Main\Entity\Ville")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="Ville_Client", referencedColumnName="Id_Ville")
+     * })
      */
     private $villeClient;
+
+    function getIdClient() {
+        return $this->idClient;
+    }
+
+    function getNomClient() {
+        return $this->nomClient;
+    }
+
+    function getPrenomClient() {
+        return $this->prenomClient;
+    }
+
+    function getEmailClient() {
+        return $this->emailClient;
+    }
+
+    function getAdresseClient() {
+        return $this->adresseClient;
+    }
+
+    function getVilleClient(): \Main\Entity\Ville {
+        return $this->villeClient;
+    }
+
+    function setIdClient($idClient) {
+        $this->idClient = $idClient;
+    }
+
+    function setNomClient($nomClient) {
+        $this->nomClient = $nomClient;
+    }
+
+    function setPrenomClient($prenomClient) {
+        $this->prenomClient = $prenomClient;
+    }
+
+    function setEmailClient($emailClient) {
+        $this->emailClient = $emailClient;
+    }
+
+    function setAdresseClient($adresseClient) {
+        $this->adresseClient = $adresseClient;
+    }
+
+    function setVilleClient(\Main\Entity\Ville $villeClient) {
+        $this->villeClient = $villeClient;
+    }
 
 
 }

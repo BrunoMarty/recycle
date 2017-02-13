@@ -30,15 +30,19 @@ class Commande
 
     /**
      * @var integer
-     *
-     * @ORM\Column(name="Client_Com", type="integer", nullable=false)
+     * @ORM\ManyToOne(targetEntity="Main\Entity\Client")
+    * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="Client_Com", referencedColumnName="Id_Client")
+     * })
      */
     private $clientCom;
 
     /**
      * @var integer
-     *
-     * @ORM\Column(name="Art_Com", type="integer", nullable=false)
+     * @ORM\ManyToOne(targetEntity="Main\Entity\Article")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="Art_Com", referencedColumnName="id")
+     * })
      */
     private $artCom;
 

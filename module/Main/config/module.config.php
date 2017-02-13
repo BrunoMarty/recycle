@@ -6,6 +6,7 @@
  * @copyright Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
+namespace Main;
 
 return array(
     'router' => array(
@@ -15,8 +16,21 @@ return array(
                 'options' => array(
                     'route'    => '/',
                     'defaults' => array(
-                        'controller' => 'Main\Controller\Index',
+                        'controller' => 'Main/Controller/Index',
                         'action'     => 'index',
+                    ),
+                ),
+            ),
+           'enfant' => array(
+                'type' => 'segment',
+                'options' => array(
+                    'route' => '/cat[/:id]',
+                    'constraints' => array(
+                        'id' => '[0-9]+',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'Main/Controller/Cat',
+                        'action' => 'affichage',
                     ),
                 ),
             ),
@@ -24,19 +38,7 @@ return array(
             // new controllers and actions without needing to create a new
             // module. Simply drop new controllers in, and you can access them
             // using the path /application/:controller/:action
-            'application' => array(
-                'type'    => 'Literal',
-                'options' => array(
-                    'route'    => '/main',
-                    'defaults' => array(
-                        '__NAMESPACE__' => 'Main\Controller',
-                        'controller'    => 'Index',
-                        'action'        => 'index',
-                    ),
-                ),
-      
-                
-            ),
+
         ),
     ),
     'service_manager' => array(
@@ -60,7 +62,8 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Main\Controller\Index' => 'Main\Controller\IndexController'
+            'Main\Controller\Index' => 'Main\Controller\IndexController',
+            'Main\Controller\Cat' => 'Main\Controller\CatController'
         ),
     ),
     'view_manager' => array(
@@ -79,11 +82,20 @@ return array(
             __DIR__ . '/../view',
         ),
     ),
-    // Placeholder for console routes
-    'console' => array(
-        'router' => array(
-            'routes' => array(
+    'doctrine' => array(
+        'driver' => array(
+            __NAMESPACE__ . '_driver' => array(
+                'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
+                'cache' => 'array',
+                'paths' => array(__DIR__ . '/../src/' . __NAMESPACE__ . '/Entity',
+                )
             ),
-        ),
+            'orm_default' => array(
+                'drivers' => array(
+                    __NAMESPACE__ . '\Entity' => __NAMESPACE__ . '_driver',
+                )
+            )
+        )
     ),
+
 );

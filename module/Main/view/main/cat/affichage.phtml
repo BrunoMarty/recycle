@@ -1,0 +1,22 @@
+<?php
+if($id>20){
+    $main = "Femmes";
+}else{
+    $main = "Enfants";
+}
+?><div class="row">
+
+
+<h1><?php echo $cat -> getNomCat(); ?><span><?php echo " - ".$main; ?></span></h1>
+<div class="news">
+<?php 
+if($articles){
+    foreach ($articles as $article) {
+        ?> <div class="col-md-4"> <?php
+        echo "<p>".$article -> getNomArt()." Prix : ".$article -> getPrixaArt()."</p>";
+        echo '<img src="http://placehold.it/300/666666/ffffff" alt="img">';
+        ?> </div> <?php
+    }
+}
+?><p>&nbsp;</p>
+</div></div>
