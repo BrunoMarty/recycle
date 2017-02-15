@@ -4,12 +4,12 @@ if($id>20){
 }elseif($id>10){
     $main = " - Enfants";
 }
-?><div class="row">
+?><div class="row bloc">
 
 
 <h1><?php echo $cat -> getNomCat(); ?><span><?php echo $main; ?></span></h1>
-
 <div class="aff">
+
 <?php 
 if($articles){
     foreach ($articles as $article) {
