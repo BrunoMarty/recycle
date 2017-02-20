@@ -42,6 +42,12 @@ class Client
      */
     private $emailClient;
 
+       /**
+     * @var string
+     *
+     * @ORM\Column(name="Password_Client", type="string", length=255, nullable=false)
+     */
+    private $password;
     /**
      * @var string
      *
@@ -105,6 +111,14 @@ class Client
 
     function setVilleClient(\Main\Entity\Ville $villeClient) {
         $this->villeClient = $villeClient;
+    }
+
+    function getPassword() {
+        return $this->password;
+    }
+
+    function setPassword($password) {
+        $this->password = $password;
     }
 
 

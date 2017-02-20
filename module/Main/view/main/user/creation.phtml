@@ -1,0 +1,109 @@
+
+<?php
+if(!$_SESSION){
+  $form = $this->form;
+      $form->prepare();
+    $form->setAttribute('action', $this->url('creation'));
+    echo $this->form()->openTag($form);
+
+?>
+<table>
+    <tfoot>
+        <tr>
+            <td>
+<?php echo $this->formSubmit($form->get('submit')); ?>
+            </td>
+           
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+        <th><?php echo $this->formLabel($form->get('nom')); ?>
+        </th>
+        <td>
+            <p>
+<?php echo $this->formInput($form->get('nom')); ?>
+
+            </p>    
+<?php echo $this->formElementErrors($form->get('nom'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+    <tr>
+        <th><?php echo $this->formLabel($form->get('prenom')); ?>
+        </th>
+        <td>
+            <p>
+<?php echo $this->formInput($form->get('prenom')); ?>
+
+            </p>    
+<?php echo $this->formElementErrors($form->get('prenom'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+    
+    <tr>
+        <th><?php echo $this->formLabel($form->get('email')); ?>
+        </th>
+        <td>
+            <p>
+<?php echo $this->formInput($form->get('email')); ?>
+
+            </p>    
+<?php echo $this->formElementErrors($form->get('email'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+    <tr>
+        <th><?php echo $this->formLabel($form->get('adresse')); ?>
+        </th>
+        <td>
+            <p>
+<?php echo $this->formInput($form->get('adresse')); ?>
+
+            </p>    
+<?php echo $this->formElementErrors($form->get('adresse'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+    <tr>
+        <th><?php echo $this->formLabel($form->get('ville')); ?>
+        </th>
+        <td>
+            <p>
+<?php echo $this->formSelect($form->get('ville')); ?>
+
+            </p>    
+<?php echo $this->formElementErrors($form->get('ville'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+    <tr>
+        <th><?php echo $this->formLabel($form->get('pwd1')); ?></th>
+        <td>
+            <p>
+<?php echo $this->formInput($form->get('pwd1')); ?>
+
+            </p>
+<?php echo $this->formElementErrors($form->get('pwd1'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+     <tr>
+        <th><?php echo $this->formLabel($form->get('pwd2')); ?></th>
+        <td>
+            <p>
+<?php echo $this->formInput($form->get('pwd2')); ?>
+
+            </p>
+<?php echo $this->formElementErrors($form->get('pwd2'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+    
+
+</tbody>
+</table>
+<?php
+echo $this->form()->closeTag(); }
+                

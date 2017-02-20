@@ -1,0 +1,62 @@
+
+<?php
+if(!$_SESSION){
+  $form = $this->form;
+      $form->prepare();
+    $form->setAttribute('action', $this->url('contact'));
+    echo $this->form()->openTag($form);
+
+?>
+<table>
+    <tfoot>
+        <tr>
+            <td>
+<?php echo $this->formSubmit($form->get('submit')); ?>
+            </td>
+        </tr>
+    </tfoot>
+    <tbody>
+    
+    <tr>
+        <th><?php echo $this->formLabel($form->get('email')); ?>
+        </th>
+        <td>
+            <p>
+<?php echo $this->formInput($form->get('email')); ?>
+
+            </p>    
+<?php echo $this->formElementErrors($form->get('email'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+    <tr>
+        <th><?php echo $this->formLabel($form->get('sujet')); ?></th>
+        <td>
+            <p>
+<?php echo $this->formInput($form->get('sujet')); ?>
+
+            </p>
+<?php echo $this->formElementErrors($form->get('sujet'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+    <tr>
+        <th><?php echo $this->formLabel($form->get('text')); ?></th>
+        <td>
+            <p>
+<?php echo $this->formTextarea($form->get('text')); ?>
+
+            </p>
+<?php echo $this->formElementErrors($form->get('text'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+    
+
+</tbody>
+</table>
+<?php
+echo $this->form()->closeTag(); }
+
+
+?>                   

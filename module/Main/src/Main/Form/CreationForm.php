@@ -23,27 +23,68 @@
                     'id'    => 'email'   // Id du champ
                 ),
                 'options' => array(
-                    'label' => 'E-mail',   // Label à l'élément
+                    'label' => 'E-mail :',   // Label à l'élément
                 ),
             ));
              $this->add(array(
-                'name' => 'pseudo',       // Nom du champ
+                'name' => 'prenom',       // Nom du champ
                 'type' => 'Text',       // Type du champ
                 'attributes' => array(
-                    'id'    => 'pseudo'   // Id du champ
+                    'id'    => 'prenom'   // Id du champ
                 ),
                 'options' => array(
-                    'label' => 'Pseudo',   // Label à l'élément
+                    'label' => 'Prénom :',   // Label à l'élément
                 ),
             ));
                 $this->add(array(
-                'name' => 'password',       // Nom du champ
-                'type' => 'Password',       // Type du champ
+                'name' => 'nom',       // Nom du champ
+                'type' => 'Text',       // Type du champ
                 'attributes' => array(
-                    'id'    => 'password'   // Id du champ
+                    'id'    => 'nom'   // Id du champ
                 ),
                 'options' => array(
-                    'label' => 'password',   // Label à l'élément
+                    'label' => 'Nom :',   // Label à l'élément
+                ),
+            )); 
+                $this->add(array(
+                'name' => 'adresse',       // Nom du champ
+                'type' => 'Text',       // Type du champ
+                'attributes' => array(
+                    'id'    => 'adresse'   // Id du champ
+                ),
+                'options' => array(
+                    'label' => 'Adresse :',   // Label à l'élément
+                ),
+            ));  
+                
+                $this->add(array(
+            'type' => 'DoctrineModule\Form\Element\ObjectSelect',
+            'name' => 'ville',
+            'options' => array(
+                'label' => 'Ville :',
+                'object_manager' => $entityManager,
+                'target_class' => 'Main\Entity\Ville',
+                'property' => 'nomVille',
+),
+        ));
+                $this->add(array(
+                'name' => 'pwd1',       // Nom du champ
+                'type' => 'Password',       // Type du champ
+                'attributes' => array(
+                    'id'    => 'pwd1'   // Id du champ
+                ),
+                'options' => array(
+                    'label' => 'Mot de passe :',   // Label à l'élément
+                ),
+            ));
+                $this->add(array(
+                'name' => 'pwd2',       // Nom du champ
+                'type' => 'Password',       // Type du champ
+                'attributes' => array(
+                    'id'    => 'pwd2'   // Id du champ
+                ),
+                'options' => array(
+                    'label' => 'Confirmation :',   // Label à l'élément
                 ),
             ));
         

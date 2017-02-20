@@ -12,6 +12,7 @@
         "zendframework/zendframework": "~2.5.1",
         "doctrine/doctrine-orm-module": "*",
         "zendframework/zend-developer-tools": "dev-master",
-        "zf-commons/zfc-admin": "dev-master"
+        "zf-commons/zfc-admin": "dev-master",
+        "zendframework/zend-mail": "^2.7"
     }
 }

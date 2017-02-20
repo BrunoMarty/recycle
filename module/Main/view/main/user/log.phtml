@@ -1,16 +1,20 @@
 
 <?php
+if(!$_SESSION){
   $form = $this->form;
       $form->prepare();
-    $form->setAttribute('action', $this->url('log'));
+    $form->setAttribute('action', $this->url('connect'));
     echo $this->form()->openTag($form);
 
 ?>
 <table>
     <tfoot>
         <tr>
-            <td colspan="2">
+            <td>
 <?php echo $this->formSubmit($form->get('submit')); ?>
+            </td>
+            <td>
+                 <a href="/creation">S'inscrire</a>
             </td>
         </tr>
     </tfoot>
@@ -44,5 +48,13 @@
 </tbody>
 </table>
 <?php
-echo $this->form()->closeTag();
+echo $this->form()->closeTag(); }
+
+else {
+    echo "<section>";
+    echo "Bonjour ".$_SESSION['nom']." ".$_SESSION['prenom']."<br>";
+    echo "Mon Panier :<br>";
+    echo '<a href="/connect">Se déconnecter</a>';
+    echo "</section>";
+}
 ?>                   

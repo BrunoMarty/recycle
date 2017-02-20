@@ -58,15 +58,16 @@ nav ul {
     display: none;
     position: absolute;
     background-color: rgba(153,68,47,0.9);  
-    min-width: 160px;
+    min-width: 150px;
     z-index: 1;
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 6px 8px;
+    color: white;
+    padding: 2px 2px;
     text-decoration: none;
     display: block;
+    font-size:1em;
 }
 
 
@@ -117,12 +118,14 @@ nav ul {
 }
 
 .aff section {
-    height: 21em;
+    height: 20em;
     flex-basis: 27%;
     overflow: hidden;
     margin-top: 1em;
     margin-left:1em;
     position: relative;
+    margin-left:2.2em;
+    margin-right:2.2em;
 }
 
 h1 span {
@@ -144,7 +147,7 @@ img {
     height: 100%;
     line-height: 8em;
     width: 100%;
-    background-color: rgba(147,201,255, .6);
+    background-color: rgba(153,68,47,0.6);
     color: white;
     text-align: center;
     font-size: 35px;
@@ -161,7 +164,7 @@ img {
 
 .news {
     display:block;
-    background-color:rgba(153,68,47,0.1);;
+    background-color:rgba(153,68,47,0.1);
     padding:1em;
   
     box-sizing: border-box;
@@ -176,6 +179,7 @@ img {
 
 
 #user {
+    border: 2px solid rgba(153,68,47,0.6); 
     position:absolute;
     background-color:rgba(255,255,255,0.2);
     right:3em;
@@ -187,6 +191,13 @@ img {
     padding-left:1em;
     padding-top:1em;
     line-height: 0.8em;
+}
+
+#user section {
+    float:left;
+    line-height:1.5em;
+    text-align:justify;
+    padding-left:2em;
 }
 
 h3 {

@@ -35,6 +35,30 @@ class Ville
      */
     private $nomVille;
 
+    function getIdVille() {
+        return $this->idVille;
+    }
+
+    function getCodePostal() {
+        return $this->codePostal;
+    }
+
+    function getNomVille() {
+        return $this->nomVille;
+    }
+
+    function setIdVille($idVille) {
+        $this->idVille = $idVille;
+    }
+
+    function setCodePostal($codePostal) {
+        $this->codePostal = $codePostal;
+    }
+
+    function setNomVille($nomVille) {
+        $this->nomVille = $nomVille;
+    }
+
 
 }
 
