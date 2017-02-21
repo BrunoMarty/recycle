@@ -37,6 +37,31 @@ class Fournisseur
      * })
      */
     private $villeClient;
+    
+    function getIdFourn() {
+        return $this->idFourn;
+    }
+
+    function getNomFourn() {
+        return $this->nomFourn;
+    }
+
+    function getVilleClient(): \Main\Entity\Ville {
+        return $this->villeClient;
+    }
+
+    function setIdFourn($idFourn) {
+        $this->idFourn = $idFourn;
+    }
+
+    function setNomFourn($nomFourn) {
+        $this->nomFourn = $nomFourn;
+    }
+
+    function setVilleClient(\Main\Entity\Ville $villeClient) {
+        $this->villeClient = $villeClient;
+    }
+
 
 
 }

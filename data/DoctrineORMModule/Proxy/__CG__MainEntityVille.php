@@ -173,4 +173,74 @@ class Ville extends \Main\Entity\Ville implements \Doctrine\ORM\Proxy\Proxy
     }
 
     
+    /**
+     * {@inheritDoc}
+     */
+    public function getIdVille()
+    {
+        if ($this->__isInitialized__ === false) {
+            return (int)  parent::getIdVille();
+        }
+
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIdVille', []);
+
+        return parent::getIdVille();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getCodePostal()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCodePostal', []);
+
+        return parent::getCodePostal();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getNomVille()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNomVille', []);
+
+        return parent::getNomVille();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setIdVille($idVille)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIdVille', [$idVille]);
+
+        return parent::setIdVille($idVille);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setCodePostal($codePostal)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCodePostal', [$codePostal]);
+
+        return parent::setCodePostal($codePostal);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setNomVille($nomVille)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNomVille', [$nomVille]);
+
+        return parent::setNomVille($nomVille);
+    }
+
 }

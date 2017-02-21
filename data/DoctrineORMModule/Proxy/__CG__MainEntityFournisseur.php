@@ -173,4 +173,74 @@ class Fournisseur extends \Main\Entity\Fournisseur implements \Doctrine\ORM\Prox
     }
 
     
+    /**
+     * {@inheritDoc}
+     */
+    public function getIdFourn()
+    {
+        if ($this->__isInitialized__ === false) {
+            return (int)  parent::getIdFourn();
+        }
+
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIdFourn', []);
+
+        return parent::getIdFourn();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getNomFourn()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNomFourn', []);
+
+        return parent::getNomFourn();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVilleClient(): \Main\Entity\Ville
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVilleClient', []);
+
+        return parent::getVilleClient();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setIdFourn($idFourn)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIdFourn', [$idFourn]);
+
+        return parent::setIdFourn($idFourn);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setNomFourn($nomFourn)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNomFourn', [$nomFourn]);
+
+        return parent::setNomFourn($nomFourn);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVilleClient(\Main\Entity\Ville $villeClient)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVilleClient', [$villeClient]);
+
+        return parent::setVilleClient($villeClient);
+    }
+
 }

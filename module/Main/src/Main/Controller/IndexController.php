@@ -27,24 +27,24 @@ class IndexController extends AbstractActionController
                 ->getServiceLocator()
                 ->get('Doctrine\ORM\EntityManager');
         if ($this->getRequest()->isPost()) {
-           $dataForm = $this->getRequest()->getPost();
-           $destinataire = 'bruno.marty4@gmail.com';
-           $expediteur = 'moi@monsite.fr';
-           $expediteurNom = 'Toto';
-           $encodageEntetes = 'utf-8';
-           $titre = 'Titre du mail créé avec ZF2 et ZF3 (en utf-8)';
-           $texte = 'Contenu du mail en utf-8. Bonne réception!';
-
-           $msg = new Message();
-           $msg->addFrom($expediteur, $expediteurNom)
-                ->addTo($destinataire)
-                ->setEncoding($encodageEntetes)
-                ->setSubject($titre);
-           $msg->getHeaders()->addHeaderLine('Content-Type','text/plain; charset=utf-8')
-                ->setBody($texte);
-
-           $transport = new Sendmail();
-           $transport->send($msg);
+//           $dataForm = $this->getRequest()->getPost();
+//           $destinataire = 'bruno.marty4@gmail.com';
+//           $expediteur = 'moi@monsite.fr';
+//           $expediteurNom = 'Toto';
+//           $encodageEntetes = 'utf-8';
+//           $titre = 'Titre du mail créé avec ZF2 et ZF3 (en utf-8)';
+//           $texte = 'Contenu du mail en utf-8. Bonne réception!';
+//
+//           $msg = new Message();
+//           $msg->addFrom($expediteur, $expediteurNom)
+//                ->addTo($destinataire)
+//                ->setEncoding($encodageEntetes)
+//                ->setSubject($titre);
+//           $msg->getHeaders()->addHeaderLine('Content-Type','text/plain; charset=utf-8')
+//                ->setBody($texte);
+//
+//           $transport = new Sendmail();
+//           $transport->send($msg);
         }
 
         $form = new ContactForm($em);
