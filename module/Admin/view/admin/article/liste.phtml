@@ -13,14 +13,16 @@
         </thead>
         <?php
         foreach ($art as $article) {
-            echo '<tr><td>' . $article->getRefArt() . '</td>'
-            . '<td>' . $article->getNomArt() . '</td>'
+           echo '<tr><td>' . $article->getRefArt() . '</td>'
+           . '<td>' . $article->getNomArt() . '</td>'
             . '<td>' . $article->getPrixaArt() . ' €</td>'
             . '<td>' . $article->getPrixvArt() . ' €</td>'
-            . '<td>' . $article->getFournArt()->getNomFourn() . '</td>'
+          //  . '<td>' . $article->getFournArt()->getNomFourn() . '</td>'
             . '<td><a href="">Modifier</a></td>'
             . '<td><a href="">Desactiver</a></td><'
             . 'td><a href="">Supprimer</a></td></tr>';
+           
+           print_r($article ->getFournArt()->getNomFourn());
         }
         ?>
     </table>

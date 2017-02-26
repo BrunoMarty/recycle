@@ -1,4 +1,3 @@
-
 <?php
     namespace Admin\Form;
     use Zend\Form\Form;
@@ -56,12 +55,22 @@
                 
                 $this->add(array(
             'type' => 'DoctrineModule\Form\Element\ObjectSelect',
-            'name' => 'ville',
+            'name' => 'fourn',
             'options' => array(
-                'label' => 'Ville :',
+                'label' => 'Fournisseur :',
                 'object_manager' => $entityManager,
                 'target_class' => 'Main\Entity\Fournisseur',
                 'property' => 'nomFourn',
+),
+        ));
+                   $this->add(array(
+            'type' => 'DoctrineModule\Form\Element\ObjectSelect',
+            'name' => 'cat',
+            'options' => array(
+                'label' => 'Catégorie :',
+                'object_manager' => $entityManager,
+                'target_class' => 'Main\Entity\Categorie',
+                'property' => 'nomCat',
 ),
         ));
                 $this->add(array(
@@ -76,7 +85,7 @@
             ));
                 $this->add(array(
                 'name' => 'quantity',       // Nom du champ
-                'type' => 'Password',       // Type du champ
+                'type' => 'Text',       // Type du champ
                 'attributes' => array(
                     'id'    => 'quantity'   // Id du champ
                 ),
@@ -111,6 +120,7 @@
                 'name' => 'etat',       // Nom du champ
                 'type' => 'Checkbox',       // Type du champ
                 'attributes' => array(
+   
                     'id'    => 'etat'   // Id du champ
                 ),
                 'options' => array(

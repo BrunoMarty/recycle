@@ -53,6 +53,46 @@ class Commande
      */
     private $dateCom;
 
+    function getIdCom() {
+        return $this->idCom;
+    }
+
+    function getQuantCom() {
+        return $this->quantCom;
+    }
+
+    function getClientCom() {
+        return $this->clientCom;
+    }
+
+    function getArtCom() {
+        return $this->artCom;
+    }
+
+    function getDateCom(){
+        return $this->dateCom;
+    }
+
+    function setIdCom($idCom) {
+        $this->idCom = $idCom;
+    }
+
+    function setQuantCom($quantCom) {
+        $this->quantCom = $quantCom;
+    }
+
+    function setClientCom($clientCom) {
+        $this->clientCom = $clientCom;
+    }
+
+    function setArtCom($artCom) {
+        $this->artCom = $artCom;
+    }
+
+    function setDateCom( $dateCom) {
+        $this->dateCom = $dateCom;
+    }
+
 
 }
 

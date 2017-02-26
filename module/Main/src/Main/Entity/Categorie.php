@@ -2,6 +2,7 @@
 
 namespace Main\Entity;
 
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -46,7 +47,7 @@ class Categorie
         return $this->nomCat;
     }
 
-    function getParentCat(): \Main\Entity\Categorie {
+    function getParentCat() {
         return $this->parentCat;
     }
 
@@ -58,7 +59,7 @@ class Categorie
         $this->nomCat = $nomCat;
     }
 
-    function setParentCat(\Main\Entity\Categorie $parentCat) {
+    function setParentCat($parentCat) {
         $this->parentCat = $parentCat;
     }
 

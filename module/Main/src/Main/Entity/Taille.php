@@ -36,6 +36,30 @@ class Taille
     private $stock;
 
 
+    function getId() {
+        return $this->id;
+    }
+
+    function getTaille() {
+        return $this->taille;
+    }
+
+    function getStock() {
+        return $this->stock;
+    }
+
+    function setId($id) {
+        $this->id = $id;
+    }
+
+    function setTaille($taille) {
+        $this->taille = $taille;
+    }
+
+    function setStock($stock) {
+        $this->stock = $stock;
+    }
+
 
 
 }

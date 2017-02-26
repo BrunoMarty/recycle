@@ -1,0 +1,138 @@
+
+<?php
+if(!$_SESSION){
+  $form = $this->form;
+      $form->prepare();
+    $form->setAttribute('action', $this->url('zfcadmin/ajoutA'));
+    echo $this->form()->openTag($form);
+
+?>
+<table>
+    <tfoot>
+        <tr>
+            <td>
+<?php echo $this->formSubmit($form->get('submit')); ?>
+            </td>
+        </tr>
+    </tfoot>
+    <tbody>
+    
+    <tr>
+        <th><?php echo $this->formLabel($form->get('nom')); ?>
+        </th>
+        <td>
+            <p>
+<?php echo $this->formInput($form->get('nom')); ?>
+
+            </p>    
+<?php echo $this->formElementErrors($form->get('nom'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+    <tr>
+        <th><?php echo $this->formLabel($form->get('ref')); ?></th>
+        <td>
+            <p>
+<?php echo $this->formInput($form->get('ref')); ?>
+
+            </p>
+<?php echo $this->formElementErrors($form->get('ref'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+    <tr>
+        <th><?php echo $this->formLabel($form->get('prixa')); ?></th>
+        <td>
+            <p>
+<?php echo $this->formInput($form->get('prixa')); ?>
+
+            </p>
+<?php echo $this->formElementErrors($form->get('prixa'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+     <tr>
+        <th><?php echo $this->formLabel($form->get('prixv')); ?></th>
+        <td>
+            <p>
+<?php echo $this->formInput($form->get('prixv')); ?>
+
+            </p>
+<?php echo $this->formElementErrors($form->get('prixv'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+     <tr>
+        <th><?php echo $this->formLabel($form->get('fourn')); ?></th>
+        <td>
+            <p>
+<?php echo $this->formSelect($form->get('fourn')); ?>
+
+            </p>
+<?php echo $this->formElementErrors($form->get('fourn'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+    <tr>
+        <th><?php echo $this->formLabel($form->get('cat')); ?></th>
+        <td>
+            <p>
+<?php echo $this->formSelect($form->get('cat')); ?>
+
+            </p>
+<?php echo $this->formElementErrors($form->get('cat'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+    <tr>
+        <th><?php echo $this->formLabel($form->get('taille')); ?></th>
+        <td>
+            <p>
+<?php echo $this->formInput($form->get('taille')); ?>
+
+            </p>
+<?php echo $this->formElementErrors($form->get('taille'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+    <tr>
+        <th><?php echo $this->formLabel($form->get('quantity')); ?></th>
+        <td>
+            <p>
+<?php echo $this->formInput($form->get('quantity')); ?>
+
+            </p>
+<?php echo $this->formElementErrors($form->get('quantity'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+    <tr>
+        <th><?php echo $this->formLabel($form->get('etat')); ?></th>
+        <td>
+            <p>
+<?php echo $this->formCheckbox($form->get('etat')); ?>
+
+            </p>
+<?php echo $this->formElementErrors($form->get('etat'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+    <tr>
+        <th><?php echo $this->formLabel($form->get('descr')); ?></th>
+        <td>
+            <p>
+<?php echo $this->formTextarea($form->get('descr')); ?>
+
+            </p>
+<?php echo $this->formElementErrors($form->get('descr'), array('class' => 'error_list')); ?>
+        </td>
+
+    </tr>
+
+</tbody>
+</table>
+<?php
+echo $this->form()->closeTag(); }
+
+
+?>                   

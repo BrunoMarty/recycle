@@ -16,17 +16,17 @@ return array(
                             )
                         )
                     ),
-//                    'membre' => array(
-//                        'type' => 'segment',
-//                        'options' => array(
-//                            'route' => '/membre',
-//                            'defaults' => array(
-//                                '__NAMESPACE__' => 'Admin\Controller',
-//                                'controller' => 'Membre',
-//                                'action' => 'index',
-//                            )
-//                        )
-//                    ),
+                    'ajoutA' => array(
+                        'type' => 'segment',
+                        'options' => array(
+                            'route' => '/article/ajout',
+                            'defaults' => array(
+                                '__NAMESPACE__' => 'Admin\Controller',
+                                'controller' => 'Article',
+                                'action' => 'ajout',
+                            )
+                        )
+                    ),
                 )
             ),
   

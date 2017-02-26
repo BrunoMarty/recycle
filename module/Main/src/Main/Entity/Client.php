@@ -85,7 +85,7 @@ class Client
         return $this->adresseClient;
     }
 
-    function getVilleClient(): \Main\Entity\Ville {
+    function getVilleClient(){
         return $this->villeClient;
     }
 
@@ -109,7 +109,7 @@ class Client
         $this->adresseClient = $adresseClient;
     }
 
-    function setVilleClient(\Main\Entity\Ville $villeClient) {
+    function setVilleClient($villeClient) {
         $this->villeClient = $villeClient;
     }
 

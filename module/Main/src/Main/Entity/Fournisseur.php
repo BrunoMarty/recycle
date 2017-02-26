@@ -46,7 +46,7 @@ class Fournisseur
         return $this->nomFourn;
     }
 
-    function getVilleClient(): \Main\Entity\Ville {
+    function getVilleClient() {
         return $this->villeClient;
     }
 
@@ -58,7 +58,7 @@ class Fournisseur
         $this->nomFourn = $nomFourn;
     }
 
-    function setVilleClient(\Main\Entity\Ville $villeClient) {
+    function setVilleClient( $villeClient) {
         $this->villeClient = $villeClient;
     }
 

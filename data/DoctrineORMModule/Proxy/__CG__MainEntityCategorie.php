@@ -202,7 +202,7 @@ class Categorie extends \Main\Entity\Categorie implements \Doctrine\ORM\Proxy\Pr
     /**
      * {@inheritDoc}
      */
-    public function getParentCat(): \Main\Entity\Categorie
+    public function getParentCat()
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getParentCat', []);
@@ -235,7 +235,7 @@ class Categorie extends \Main\Entity\Categorie implements \Doctrine\ORM\Proxy\Pr
     /**
      * {@inheritDoc}
      */
-    public function setParentCat(\Main\Entity\Categorie $parentCat)
+    public function setParentCat($parentCat)
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setParentCat', [$parentCat]);

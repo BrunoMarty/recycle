@@ -81,12 +81,18 @@ class Article
     private $etat;
 
     /**
-     * @var \Main\Entity\Taille
+     * @var string
      *
-     * @ORM\ManyToMany(targetEntity="Main\Entity\Taille")
-     * @ORM\JoinColumn(name="id", referencedColumnName="id")
+     * @ORM\Column(name="Taille", type="string", length=255, nullable=false)
      */
     private $tailleArt;
+    
+     /**
+     * @var integer
+     *
+     * @ORM\Column(name="Quantity", type="integer", nullable=false)
+     */
+    private $quantity;
 
     /**
      * @var \Main\Entity\Fournisseur
@@ -97,7 +103,7 @@ class Article
      * })
      */
     private $fournArt;
-
+    
     function getId() {
         return $this->id;
     }
@@ -122,7 +128,7 @@ class Article
         return $this->descriptArt;
     }
 
-    function getCatArt(): \Main\Entity\Categorie {
+    function getCatArt(){
         return $this->catArt;
     }
 
@@ -134,11 +140,15 @@ class Article
         return $this->etat;
     }
 
-    function getTailleArt(): \Main\Entity\Taille {
+    function getTailleArt() {
         return $this->tailleArt;
     }
 
-    function getFournArt(): \Main\Entity\Fournisseur {
+    function getQuantity() {
+        return $this->quantity;
+    }
+
+    function getFournArt(){
         return $this->fournArt;
     }
 
@@ -166,7 +176,7 @@ class Article
         $this->descriptArt = $descriptArt;
     }
 
-    function setCatArt(\Main\Entity\Categorie $catArt) {
+    function setCatArt($catArt) {
         $this->catArt = $catArt;
     }
 
@@ -178,13 +188,18 @@ class Article
         $this->etat = $etat;
     }
 
-    function setTailleArt(\Main\Entity\Taille $tailleArt) {
+    function setTailleArt($tailleArt) {
         $this->tailleArt = $tailleArt;
     }
 
-    function setFournArt(\Main\Entity\Fournisseur $fournArt) {
+    function setQuantity($quantity) {
+        $this->quantity = $quantity;
+    }
+
+    function setFournArt($fournArt) {
         $this->fournArt = $fournArt;
     }
+
 
 
 }

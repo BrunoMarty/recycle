@@ -202,7 +202,7 @@ class Fournisseur extends \Main\Entity\Fournisseur implements \Doctrine\ORM\Prox
     /**
      * {@inheritDoc}
      */
-    public function getVilleClient(): \Main\Entity\Ville
+    public function getVilleClient()
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVilleClient', []);
@@ -235,7 +235,7 @@ class Fournisseur extends \Main\Entity\Fournisseur implements \Doctrine\ORM\Prox
     /**
      * {@inheritDoc}
      */
-    public function setVilleClient(\Main\Entity\Ville $villeClient)
+    public function setVilleClient($villeClient)
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVilleClient', [$villeClient]);
